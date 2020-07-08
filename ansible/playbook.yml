@@ -1,0 +1,9 @@
+---
+- name: Tasks to download file
+  hosts: all
+  tasks:
+    - name: Download file
+      get_url:
+        url: https://s3.amazonaws.com/com.rapid7.razor.public/endpoint/agent/latest/linux/x86_64/agent_control_latest.sh
+        dest: /tmp/agent_control_latest_x64.sh
+        mode: '0775'
